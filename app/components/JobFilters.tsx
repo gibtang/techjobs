@@ -1,5 +1,6 @@
 import { Level, Box } from "react-bulma-components"
 import { SOURCES } from "app/core/constants"
+import SalaryFilter from "./SalaryFilter"
 
 const Filters = (props) => {
   const { withSalary, setWithSalary, sources, setSources } = props
@@ -53,7 +54,8 @@ const Filters = (props) => {
             <span className="job-filter-text">Filter: </span>
             <label>
               <input type="checkbox" checked={withSalary} onChange={toggleWithSalary} />
-              <span className="job-filter-label-text">With salary</span>
+              <span className="job-filter-label-text">With salary more than</span>
+              <SalaryFilter></SalaryFilter>
             </label>
           </Box>
         </Level.Item>
